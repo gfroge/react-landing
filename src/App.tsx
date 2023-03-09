@@ -9,14 +9,21 @@ export default function App() {
 
       <main className="main">
         <section className="home">
-          <h1 className="home__title">The Sky Is The Limit</h1>
-          <div className="home__subtitle">
-            We provide world class financial assistance
+          <div className="home__bg">
+            <div className="home__content">
+              <h1 className="home__title">The Sky Is The Limit</h1>
+              <div className="home__subtitle">
+                We provide world class financial assistance
+              </div>
+              <a href="404.html">
+                <GreenButton>
+                  <i className="arrow"></i>Read More
+                </GreenButton>
+              </a>
+            </div>
           </div>
-          <GreenButton><i className="arrow"></i>Read More</GreenButton>
         </section>
       </main>
-      
     </div>
   );
 }
