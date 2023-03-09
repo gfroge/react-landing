@@ -1,0 +1,42 @@
+.header {
+  height: 70px;
+  &__container {
+    height: 100%;
+    max-width: 1360px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 50px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    color: #fff;
+  }
+  &__logo {
+  }
+  &__links {
+  }
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  &__li {
+    &:not(:last-child) {
+      margin-right: 38px;
+    }
+  }
+  &__link {
+    color: #fff;
+    font-size: 18px;
+    line-height: 156%;
+    text-decoration: underline;
+    text-decoration-color: transparent;
+    transition: all 0.3s ease 0s;
+    &:hover {
+      text-decoration-color: inherit;
+    }
+  }
+}
