@@ -7,7 +7,7 @@ $breakpoint3: 460px;
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   @media (max-width: $breakpoint2) {
     height: 100px;
   }

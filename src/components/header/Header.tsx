@@ -1,4 +1,4 @@
-import Logo from "~/assets/logo";
+import Logo from "~/assets/images/svg/logo";
 import "./Header.scss";
 
 export default function Header() {
