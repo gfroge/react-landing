@@ -27,7 +27,10 @@ body {
 .home {
   color: #fff;
   &__bg {
-    background: url("../frontBG.webp");
+    background-image: image-set( 
+      url(../front/frontBG.webp) type("image/webp"),
+      url(../front/frontBG.png) type("image/png")
+      );
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -102,8 +105,11 @@ body {
     flex-direction: column;
     justify-content: center;
   }
-  &__image{
-    background-image: url(../about.webp);
+  &__image {
+    background-image: image-set( 
+      url(../about/about.webp) type("image/webp"),
+      url(../about/about.png) type("image/png")
+      );
     min-height: 460px;
     background-position: center;
     background-repeat: no-repeat;
@@ -111,10 +117,13 @@ body {
     img {
       display: none;
     }
-    @media (max-width:800px) {
-      background-image: url(../about2.webp);
+    @media (max-width: 800px) {
+      background-image: image-set( 
+        url(../about/about2.webp) type("image/webp"),
+        url(../about/about2.png) type("image/png")
+        );
     }
-    @media (max-width:766px) {
+    @media (max-width: 766px) {
       background: none;
       min-height: auto;
       img {
@@ -138,7 +147,47 @@ body {
     line-height: 156%;
     margin-bottom: 17px;
   }
-  &__button {
+}
 
+.cases {
+  margin-top: 50px;
+  margin-bottom: 47px;
+  padding: 0 28px;
+  &__cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 8px;
+    margin-top: 40px;
+    @media(max-width:766px){
+      grid-template-columns: 1fr 1fr;
+    }
+    @media(max-width:440px){
+      grid-template-columns: 1fr;
+    }
+  }
+  &__card {
+    img {
+      max-width: 100%;
+      width: 100%;
+    }
+  }
+}
+
+.common-section {
+  text-align: center;
+  color: $secondary;
+  &__suptitle {
+    font-size: 20px;
+    line-height: 165%;
+  }
+  &__title {
+    margin-top: 15px;
+    margin-bottom: 35px;
+    font-size: 38px;
+    line-height: 126%;
+  }
+  &__subtitle {
+    font-size: 18px;
+    line-height: 156%;
   }
 }

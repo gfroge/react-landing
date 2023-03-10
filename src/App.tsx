@@ -6,8 +6,20 @@ import { ImageTextSplit } from "./components/common/misc";
 import "~/App.scss";
 
 export default function App() {
+  const casesCardsDOM: Array<JSX.Element> = [];
+  for (let i = 1; i < 9; i++) {
+    casesCardsDOM.push(
+      <div className="cases__card" key={i}>
+        <picture>
+          <source srcSet={`/casesCards/${i}.webp`} />
+          <img src={`/casesCards/${i}.png`} alt="case" />
+        </picture>
+      </div>
+    );
+  }
   return (
     <div className="App">
+      {/* todo: make header links active */}
       <Header />
 
       <main className="main">
@@ -69,7 +81,10 @@ export default function App() {
 
           <ImageTextSplit className="about__solutions solutions">
             <div className="solutions__image">
-              <img src="/about.webp" alt="our team" />
+              <picture>
+                <source srcSet="/about/about.webp" />
+                <img src="/about/about.png" alt="case" />
+              </picture>
             </div>
 
             <div className="solutions__content">
@@ -90,6 +105,16 @@ export default function App() {
               </a>
             </div>
           </ImageTextSplit>
+        </section>
+
+        <section className="cases common-section container">
+          <div className="common-section__suptitle">This is what we do</div>
+          <h2 className="common-section__title">Business Cases</h2>
+          <div className="common-section__subtitle">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto,
+            sapiente!
+          </div>
+          <div className="cases__cards">{casesCardsDOM}</div>
         </section>
       </main>
     </div>
