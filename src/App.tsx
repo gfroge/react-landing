@@ -116,6 +116,33 @@ export default function App() {
           </div>
           <div className="cases__cards">{casesCardsDOM}</div>
         </section>
+
+        <section className="blog container">
+          <ImageTextSplit reverse className="blog__solutions solutions solutions">
+            <div className="solutions__image solutions__image--blog">
+            <picture>
+                <source srcSet="/blog/blog.webp" />
+                <img src="/blog/blog.png" alt="case" />
+              </picture>
+            </div>
+
+            <div className="solutions__content solutions__content--blue">
+              <div className="solutions__suptitle">April 16 2020</div>
+              <h2 className="solutions__title">Blog Post One</h2>
+              <p className="solutions__text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Voluptate, ipsum dignissimos quae laudantium asperiores nam
+                aliquid impedit harum illum dolore explicabo ab dolores itaque
+                rerum temporibus doloribus iste maiores deleniti?
+              </p>
+              <a href="404.html" target="_blank" className="solutions__button">
+                <TransparentButton hoverColor="accent">
+                  Read Our Blog
+                </TransparentButton>
+              </a>
+            </div>
+          </ImageTextSplit>
+        </section>
       </main>
     </div>
   );
