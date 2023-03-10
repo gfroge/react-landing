@@ -3,6 +3,7 @@ import { Bank, Book, Pencil } from "~/assets/images/svg";
 import { GreenButton, TransparentButton } from "~/components/common/buttons";
 import { GreenRoundedIcon } from "~/components/common/icons";
 import { ImageTextSplit } from "./components/common/misc";
+import { SocialBadge } from "./components/common/links";
 import "~/App.scss";
 
 export default function App() {
@@ -14,6 +15,34 @@ export default function App() {
           <source srcSet={`/casesCards/${i}.webp`} />
           <img src={`/casesCards/${i}.png`} alt="case" />
         </picture>
+      </div>
+    );
+  }
+
+  const teamCardsDOM: Array<JSX.Element> = [];
+  const teamCardsEnum = [
+    ["John Doe", "President"],
+    ["Jane Doe", "Vice President"],
+    ["Steve Smith", "Marketing Head"],
+  ];
+  for (let i = 1; i < 4; i++) {
+    teamCardsDOM.push(
+      <div className="team__card employee">
+        <div className="employee__image" key={i}>
+          <div className="employee__overlay">
+            <div className="employee__social">
+              <SocialBadge />
+            </div>
+          </div>
+          <picture>
+            <source srcSet={`/team/${i}.webp`} />
+            <img src={`/team/${i}.png`} alt="case" />
+          </picture>
+        </div>
+        <div className="employee__text">
+          <h3 className="employee__name">{teamCardsEnum[i-1][0]}</h3>
+          <div className="employee__job">{teamCardsEnum[i-1][1]}</div>
+        </div>
       </div>
     );
   }
@@ -118,9 +147,12 @@ export default function App() {
         </section>
 
         <section className="blog container">
-          <ImageTextSplit reverse className="blog__solutions solutions solutions">
+          <ImageTextSplit
+            reverse
+            className="blog__solutions solutions solutions"
+          >
             <div className="solutions__image solutions__image--blog">
-            <picture>
+              <picture>
                 <source srcSet="/blog/blog.webp" />
                 <img src="/blog/blog.png" alt="case" />
               </picture>
@@ -142,6 +174,16 @@ export default function App() {
               </a>
             </div>
           </ImageTextSplit>
+        </section>
+
+        <section className="team common-section container">
+          <div className="common-section__suptitle">Who we are</div>
+          <h2 className="common-section__title">Our Professional Team</h2>
+          <div className="common-section__subtitle">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto,
+            sapiente!
+          </div>
+          <div className="team__cards">{teamCardsDOM}</div>
         </section>
       </main>
     </div>
