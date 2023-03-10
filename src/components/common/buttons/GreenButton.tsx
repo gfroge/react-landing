@@ -5,7 +5,7 @@ type Props = {
   width?: string;
 };
 
-export const GreenButton = styled.button.attrs((props: Props) => {
+const GreenButton = styled.button.attrs((props: Props) => {
   return {
     type: props.submit ? "submit" : ""
   };
@@ -23,3 +23,4 @@ transition: all 0.3s ease 0s;
   background-color: ${props => props.theme.colors.primaryHover};
 }
 `;
+export default GreenButton

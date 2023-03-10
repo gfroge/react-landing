@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const GreenRoundedIcon = styled.span`
+const GreenRoundedIcon = styled.span`
 width: 67px;
 height: 67px;
 display: flex;
@@ -12,3 +12,4 @@ svg {
   max-width: 100%;
 }
 `;
+export default GreenRoundedIcon
