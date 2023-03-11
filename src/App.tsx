@@ -6,6 +6,7 @@ import { ImageTextSplit } from "./components/common/misc";
 import { SocialBadge } from "./components/common/links";
 import "~/App.scss";
 import { ContactForm } from "./components/forms";
+import Footer from "./components/footer/Footer";
 
 export default function App() {
   const casesCardsDOM: Array<JSX.Element> = [];
@@ -201,6 +202,8 @@ export default function App() {
             </div>
           </ImageTextSplit>
         </section>
+
+        <Footer/>
       </main>
     </div>
   );
