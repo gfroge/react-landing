@@ -107,6 +107,10 @@ body {
     &--blue {
       background-color: $accent;
     }
+    &--grey {
+      background-color: $bgSecondary;
+      color: $secondary;
+    }
   }
   &__image {
     background-image: image-set(url(../about/about.webp) type("image/webp"), url(../about/about.png) type("image/png"));
@@ -146,6 +150,20 @@ body {
         }
       }
     }
+    &--contact{
+      background-image: image-set(
+        url(../callback/callback.webp) type("image/webp"),
+        url(../callback/callback.png) type("image/png")
+      ) !important;
+      @media (max-width: 766px) {
+        background: none !important;
+        min-height: auto;
+        img {
+          display: block;
+          max-width: 100%;
+        }
+      }
+    }
   }
   &__suptitle {
     font-size: 20px;
@@ -153,6 +171,7 @@ body {
     margin-bottom: 5px;
   }
   &__title {
+    font-weight: 300;
     font-size: 38px;
     line-height: 126%;
     margin-bottom: 26px;
@@ -200,6 +219,7 @@ body {
     margin-bottom: 35px;
     font-size: 38px;
     line-height: 126%;
+    font-weight: 300;
   }
   &__subtitle {
     font-size: 18px;

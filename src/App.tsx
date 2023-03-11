@@ -5,6 +5,7 @@ import { GreenRoundedIcon } from "~/components/common/icons";
 import { ImageTextSplit } from "./components/common/misc";
 import { SocialBadge } from "./components/common/links";
 import "~/App.scss";
+import { ContactForm } from "./components/forms";
 
 export default function App() {
   const casesCardsDOM: Array<JSX.Element> = [];
@@ -27,7 +28,7 @@ export default function App() {
   ];
   for (let i = 1; i < 4; i++) {
     teamCardsDOM.push(
-      <div className="team__card employee">
+      <div className="team__card employee" key={i}>
         <div className="employee__image" key={i}>
           <div className="employee__overlay">
             <div className="employee__social">
@@ -40,8 +41,8 @@ export default function App() {
           </picture>
         </div>
         <div className="employee__text">
-          <h3 className="employee__name">{teamCardsEnum[i-1][0]}</h3>
-          <div className="employee__job">{teamCardsEnum[i-1][1]}</div>
+          <h3 className="employee__name">{teamCardsEnum[i - 1][0]}</h3>
+          <div className="employee__job">{teamCardsEnum[i - 1][1]}</div>
         </div>
       </div>
     );
@@ -147,14 +148,11 @@ export default function App() {
         </section>
 
         <section className="blog container">
-          <ImageTextSplit
-            reverse
-            className="blog__solutions solutions solutions"
-          >
+          <ImageTextSplit reverse className="blog__solutions solutions">
             <div className="solutions__image solutions__image--blog">
               <picture>
                 <source srcSet="/blog/blog.webp" />
-                <img src="/blog/blog.png" alt="case" />
+                <img src="/blog/blog.png" alt="blog" />
               </picture>
             </div>
 
@@ -184,6 +182,24 @@ export default function App() {
             sapiente!
           </div>
           <div className="team__cards">{teamCardsDOM}</div>
+        </section>
+
+        <section className="contact container">
+          <ImageTextSplit className="blog__solutions solutions">
+            <div className="solutions__image solutions__image--contact">
+              <picture>
+                <source srcSet="/callback/callback.webp" />
+                <img src="/callback/callback.png" alt="callback" />
+              </picture>
+            </div>
+
+            <div className="solutions__content solutions__content--grey">
+              <h2 className="solutions__title solutions__title">
+                Request Callback
+              </h2>
+              <ContactForm/>
+            </div>
+          </ImageTextSplit>
         </section>
       </main>
     </div>

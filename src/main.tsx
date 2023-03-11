@@ -9,7 +9,9 @@ const theme = {
     primary: '#28A745',
     primaryHover: '#1f8236',
     secondary: '#333333',
+    placeholder: '#808080',
     accent: '#0284D0',
+    error: '#a32e1c',
     bgPrimary: '#E5E5E5',
     bgSecondary: '#F4F4F4'
   }
