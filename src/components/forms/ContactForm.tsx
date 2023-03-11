@@ -9,8 +9,9 @@ type ValidationRules = {
   validName?: RegExp;
 };
 
-const emailPattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,13}$/;
-const namePattern = /([a-zA-Z-])\w+/;
+const emailPattern =
+  /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+const namePattern = /((^[A-Z]+[a-z- ]+)|(^[a-z- ]+[A-Z]+))+[A-Za-z- ]+$/i;
 
 const errorMessages = {
   notEmpty: "Field must not be empty",
@@ -104,6 +105,7 @@ export default function ContactForm() {
           }
         />
         <label
+          data-testid="nameLabel"
           className={
             name.isDirty
               ? "contact-form__label contact-form__label--visible"
@@ -129,6 +131,7 @@ export default function ContactForm() {
           }
         />
         <label
+        data-testid="emailLabel"
           className={
             email.isDirty
               ? "contact-form__label contact-form__label--visible"
