@@ -50,7 +50,6 @@ export default function App() {
   }
   return (
     <div className="App">
-      {/* todo: make header links active */}
       <Header />
 
       <main className="main">
