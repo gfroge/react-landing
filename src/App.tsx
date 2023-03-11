@@ -14,8 +14,8 @@ export default function App() {
     casesCardsDOM.push(
       <div className="cases__card" key={i}>
         <picture>
-          <source srcSet={`/casesCards/${i}.webp`} />
-          <img src={`/casesCards/${i}.png`} alt="case" />
+          <source srcSet={`casesCards/${i}.webp`} />
+          <img src={`casesCards/${i}.png`} alt="case" />
         </picture>
       </div>
     );
@@ -37,8 +37,8 @@ export default function App() {
             </div>
           </div>
           <picture>
-            <source srcSet={`/team/${i}.webp`} />
-            <img src={`/team/${i}.png`} alt="case" />
+            <source srcSet={`team/${i}.webp`} />
+            <img src={`team/${i}.png`} alt="case" />
           </picture>
         </div>
         <div className="employee__text">
@@ -112,8 +112,8 @@ export default function App() {
           <ImageTextSplit className="about__solutions solutions">
             <div className="solutions__image">
               <picture>
-                <source srcSet="/about/about.webp" />
-                <img src="/about/about.png" alt="case" />
+                <source srcSet="about/about.webp" />
+                <img src="about/about.png" alt="case" />
               </picture>
             </div>
 
@@ -151,8 +151,8 @@ export default function App() {
           <ImageTextSplit reverse className="blog__solutions solutions">
             <div className="solutions__image solutions__image--blog">
               <picture>
-                <source srcSet="/blog/blog.webp" />
-                <img src="/blog/blog.png" alt="blog" />
+                <source srcSet="blog/blog.webp" />
+                <img src="blog/blog.png" alt="blog" />
               </picture>
             </div>
 
@@ -188,8 +188,8 @@ export default function App() {
           <ImageTextSplit className="blog__solutions solutions">
             <div className="solutions__image solutions__image--contact">
               <picture>
-                <source srcSet="/callback/callback.webp" />
-                <img src="/callback/callback.png" alt="callback" />
+                <source srcSet="callback/callback.webp" />
+                <img src="callback/callback.png" alt="callback" />
               </picture>
             </div>
 
