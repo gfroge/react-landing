@@ -27,10 +27,12 @@ body {
 .home {
   color: #fff;
   &__bg {
+    background-image: url(../front/frontBG.webp);
     background-image: image-set(
       url(../front/frontBG.webp) type("image/webp"),
       url(../front/frontBG.png) type("image/png")
     );
+
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -113,6 +115,7 @@ body {
     }
   }
   &__image {
+    background-image: url(../about/about.webp);
     background-image: image-set(url(../about/about.webp) type("image/webp"), url(../about/about.png) type("image/png"));
     min-height: 460px;
     background-position: center;
@@ -122,6 +125,7 @@ body {
       display: none;
     }
     @media (max-width: 800px) {
+      background-image: url(../about/about2.webp);
       background-image: image-set(
         url(../about/about2.webp) type("image/webp"),
         url(../about/about2.png) type("image/png")
@@ -136,6 +140,7 @@ body {
       }
     }
     &--blog {
+      background-image: url(../blog/blog.webp);
       background-image: image-set(
         url(../blog/blog.webp) type("image/webp"),
         url(../blog/blog.png) type("image/png")
@@ -150,7 +155,8 @@ body {
         }
       }
     }
-    &--contact{
+    &--contact {
+      background-image: url(../callback/callback.webp);
       background-image: image-set(
         url(../callback/callback.webp) type("image/webp"),
         url(../callback/callback.png) type("image/png")
@@ -236,11 +242,11 @@ body {
     gap: 20px;
     justify-content: space-between;
     margin-top: 45px;
-    @media (max-width:766px) {
+    @media (max-width: 766px) {
       gap: 10px;
       flex-direction: column;
       align-items: center;
-      > div{
+      > div {
         max-width: 430px;
       }
     }
@@ -271,17 +277,17 @@ body {
     max-width: 100%;
     max-height: 286px;
   }
-  &__text{
+  &__text {
     color: $secondary;
     margin-top: 13px;
     text-align: center;
     width: 100%;
   }
-  &__name{
+  &__name {
     font-size: 25px;
     line-height: 127%;
   }
-  &__job{
+  &__job {
     font-size: 18px;
     line-height: 156%;
     margin-top: 12px;
